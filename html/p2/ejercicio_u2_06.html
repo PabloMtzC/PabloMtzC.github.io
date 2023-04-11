@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--
+    Nombre: Pablo Martínez Cruz
+    Materia: Programación web I
+    Fecha: 30/Marzo/2023
+    Descripción: Estilos CSS 
+-->
+<html lang="es">
+    <head>
+        <title>Unidad 02-Ejercicio06</title>
+        <meta charset="utf-8">
+        <meta name="author"content="Pablo Martínez Cruz">
+        <meta name="revised"content="Jueves, 30 de Marzo del 2023">
+        <meta name="description"content="Estilo en archivo externo(uso de id y class)">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+        <link href="estilo.css" rel="stylesheet">
+    </head>
+    <body>
+        <hgroup id="group_1">
+            <h1>CSS</h1>
+            <h2>Estilo en linea</h2>
+            <ul id="lista_u">
+                <li id="lista_item1"><a href="#" id="link_1">Inicio</a></li>
+                <li id="lista_item2"><a href="#" id="link_2">Alumnos</a></li>
+                <li id="lista_item3"><a href="#" id="link_3">Aspirantes</a></li>
+                <li id="lista_item4"><a href="#" id="link4">Docentes</a></li>
+                <li><a href="#" id="link_5">Administrativos</a></li>
+            </ul>
+        </hgroup>
+        <hgroup>
+            <h1>CSS</h1>
+            <h2>Párrafos</h2>
+            <p id="p1">Quisque dignissim nunc orci. Pellentesque in dapibus erat. Sed dolor est, pulvinar ut mollis quis, suscipit nec mauris. Morbi feugiat lacus lectus, sed dapibus mi euismod at. Duis pellentesque quam eros, in venenatis neque faucibus quis. Praesent auctor, dolor eu dictum sodales, lacus mi hendrerit lacus, in varius erat enim ut dui. Morbi leo ex, rutrum ac neque quis, tincidunt tincidunt est. In pellentesque nulla eget sollicitudin tristique. Ut aliquet vehicula ex, vitae consequat tellus euismod quis. Phasellus vestibulum mauris non fringilla condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris sollicitudin, nibh ut vehicula egestas, erat eros elementum dolor, at semper nunc neque vel risus. Donec quis efficitur turpis, a facilisis risus. In hac habitasse platea dictumst.</p>
+            <p id="pEspecial">Vivamus tincidunt iaculis aliquam. Morbi vitae lorem posuere, tempus neque in, dictum orci. Morbi id interdum nulla. Donec vel ultrices erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris efficitur facilisis ipsum non interdum. Nam lacinia tristique nunc at iaculis.</p>
+            <p id="p2">Sed sed nulla in est dictum aliquam. Etiam ex turpis, consequat nec viverra eget, tincidunt in massa. Aenean in vulputate dui, et volutpat dui. Sed rutrum libero non elit egestas tempus. Mauris ut nulla rutrum justo maximus facilisis. Nam consequat mauris at ultrices imperdiet. Aenean sollicitudin odio ac lacinia maximus. Praesent vehicula convallis neque ac mollis. Donec finibus vel orci nec semper. Phasellus mollis purus nec erat vestibulum, et ornare felis gravida.</p>
+            <p id="p3">Vestibulum ut purus sed erat iaculis egestas. Pellentesque in vulputate odio. Donec dapibus commodo ex, ac tincidunt ex blandit vel. Phasellus a facilisis dui. Nam a neque dapibus, dapibus purus ut, molestie lacus. Morbi in quam elit. Donec sed ante in diam consequat pretium. Aliquam ac hendrerit elit. Phasellus nisi turpis, ultricies nec urna vel, eleifend sodales nisl. Ut in risus sit amet libero pulvinar imperdiet id id libero.</p>
+        </hgroup>
+        <hgroup>
+            <h2>Estilo con selectores</h2>
+                <table border="5">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                    <th>E</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+                </table>
+                <table id="cuadro">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>D</th>
+                        <th>E</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="alterno">
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr class="alterno">
+                        <td>3</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr class="alterno">
+                        <td>5</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                    </table>
+        </hgroup>
+        <hgroup>
+            <h2>Tabla colores</h2>
+            <table border="5" id="tablaColores">
+              <thead>
+                <tr>
+                  <th colspan="4">Cuadro de colores</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="color1">0º rgb(255,0,0)</td>
+                  <td id="color2">15º rgb(255,64,0)</td>
+                  <td id="color3">30º rgb(255,128,0)</td>
+                  <td id="color4">45º rgb(255,191,0)</td>
+                </tr>
+                <tr>
+                  <td id="color5">60º rgb(255,255,0)</td>
+                  <td id="color6">75º rgb(191,255,0)</td>
+                  <td id="color7">90º rgb(128,255,0)</td>
+                  <td id="color8">105º rgb(64,255,0)</td>
+                </tr>
+                <tr>
+                  <td id="color9">120º rgb(0,255,0)</td>
+                  <td id="color10">135º rgb(0,255,64)</td>
+                  <td id="color11">150º rgb(0,255,128)</td>
+                  <td id="color12">165º rgb(0,255,191)</td>
+                </tr>
+                <tr>
+                  <td id="color13">180º rgb(0,255,255)/td>
+                  <td id="color14">195º rgb(0,191,255)</td>
+                  <td id="color15">210º rgb(0,128,255)</td>
+                  <td id="color16">225º rgb(0,64,255)</td>
+                </tr>
+                <tr>
+                  <td id="color17">240º rgb(0,0,255)</td>
+                  <td id="color18">255º rgb(64,0,255)</td>
+                  <td id="color19">270º rgb(128,0,255)</td>
+                  <td id="color20">285º rgb(191,0,255)</td>
+                </tr>
+                <tr>
+                  <td id="color21">300º rgb(255,0,255)</td>
+                  <td id="color23">315º rgb(255,0,191)</td>
+                  <td id="color24">330º rgb(255,0,128)</td>
+                  <td id="color24">345º rgb(255,0,64)</td>
+                </tr>
+              </tbody>
+            </table>
+          </hgroup>
+    </body>
+</html>
