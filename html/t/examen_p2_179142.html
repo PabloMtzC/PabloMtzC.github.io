@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+    Nombre: Pablo Martínez Cruz
+    Materia: Programación web I
+    Fecha: 14/Abril/2023
+    Descripción: 
+</-->
+<html lang="es">
+    <head>
+        <title>Examen_Práctico2</title>
+        <meta charset="utf-8">
+        <meta name="author"content="Pablo Martínez Cruz">
+        <meta name="revised"content="">
+        <meta name="description"content="">
+        <style>
+            th{background-color: darkgray;}
+            .definicion{background-color: lightgreen;}
+            .formula{background-color: lightblue;}
+            .morado{background-color: violet;}
+            .coral{background-color: coral;}
+            .naranja{background-color: orange;}
+            .ecuaciones{font-family: 'Caveat', cursive; font-size: 20px;}
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <hgroup class="ecuaciones">
+            <h1>Ecuaciones cuadráticas</h1>
+            (a+b)<sup>2</sup>=a<sup>2</sup>+2ab+b<sup>2</sup><br>
+            (a-b)<sup>2</sup>=a<sup>2</sup>-2ab+b<sup>2</sup><br>
+            a<sup>2</sup>-b<sup>2</sup>=(a+b)(a-b)<br>
+            (a+b)<sup>3</sup>=a<sup>3</sup>+3a<sup>2</sup>b+3ab<sup>2</sup>+b<sup>3</sup><br>
+            (a-b)<sup>3</sup>=a<sup>3</sup>-3a<sup>2</sup>b+3ab<sup>2</sup>-b<sup>3</sup><br>
+            a<sup>3</sup>+b<sup>3</sup>=(a+b)(a<sup>2</sup>-ab+b<sup>2</sup>)<br>
+            a<sup>3</sup>-b<sup>3</sup>=(a-b)(a<sup>2</sup>+ab+b<sup>2</sup>)
+        </hgroup>
+        <hgroup>
+            <h1>Compuestos quimicos</h1>
+            <table border="5">
+                <thead>
+                    <tr><th colspan="3">&nbsp;</th><th colspan="2">Nomenclatura</th></tr>
+                </thead>
+                <tbody>
+                    <tr><th>Tipo de compuesto</th><th>Definición</th><th>Formulación</th><th>IUPAC</th><th>Tradicional</th></tr>
+                    <tr><th>Óxido</th><td class="definicion">O<sup>-2</sup>+El<sup>+</sup></td><td class="formula">Fe<sub>2</sub>O<sub>3</sub></td><td class="morado">Óxido de Hierro (III)</td><td class="naranja">Óxido Férrico</td></tr>
+                    <tr><th rowspan="2">Hidruros</th><td class="definicion">H<sup>-1</sup>+Me<sup>+</sup></td><td class="formula">CoH<sub>2</sub></td><td class="morado">Hidruro de Cobalto(II)</td><td class="naranja">Hidruro Cobaltoso</td></tr>
+                    <tr><td class="definicion">H<sup>+1</sup>+NoMe<sup>-</sup></td><td class="formula">H<sub>3</sub>N</td><td colspan="2" class="coral">Nirturo de Hidrógeno</td></tr>
+                    <tr><th>Hidróxidos</th><td class="definicion">Me<sup>+</sup>+(OH)<sup>-1</sup></td><td class="formula">Au(OH)<sub>3</sub></td><td class="morado">Hidróxido de Oro(III)</td><td class="naranja">Hidróxido Aúrico</td></tr>
+                    <tr><th>Ácidos Hidrácidos</th><td class="definicion">H<sup>+1</sup>+NoMe<sup>-</sup></td><td class="formula">HCL</td><td colspan="2" class="coral">Ácido clorhídrico</td></tr>
+                    <tr><th>Ácidos Oxácidos</th><td class="definicion">H<sup>+1</sup>+O<sup>-2</sup>+El<sup>+</sup></td><td class="formula">H<sub>2</sub>SO<sub>4</sub></td><td class="morado">Tetrasulfato de Hidrógeno</td><td class="naranja">Sulfato de Hidrógeno</td></tr>
+                    <tr><th>Sales Neutras</th><td class="definicion">Oxácido-H+Me</td><td class="formula">K<sub>2</sub>SO<sub>4</sub></td><td class="morado">Tetrasulfato de Potasio</td><td class="naranja">Sulfato de Potasio</td></tr>
+                    <tr><th>Sales Ácidas</th><td class="definicion">Oxácido+Me</td><td class="formula">Al(HSO<sub>4</sub>)<sub>3</sub></td><td class="morado">Tetrasulfato de Hidrógeno y Aluminio</td><td class="naranja">Sulfato Ácido de Aluminio</td></tr>
+                    <tr><th rowspan="2">Peróxidos</th><td class="definicion">(O<sub>2</sub>)<sup>-2</sup>+Me<sup>+</sup></td><td rowspan="2" class="formula">CaO<sub>2</sub></td><td colspan="2" rowspan="2" class="coral">Peróxido de Calcio</td></tr>
+                    <tr><td class="definicion">(O<sub>2</sub>)<sup>-2</sup>+H<sup>+1</sup></td></tr>
+                    <tr><th>Cationes</th><td class="definicion">El<sup>-</sup>+Xe<sup>-</sup></td><td rowspan="2" class="formula">Mg<sup>+2</sup></td><td class="morado">Catión de Magnesio (II)</td><td rowspan="2" class="naranja">Ion de Magnesio</td></tr>
+                    <tr><th>Anión</th><td class="definicion">El<sup>+</sup>+Xe<sup>-</sup></td><td class="morado">Anión de Magnesio(II)</td></tr>
+                </tbody>
+            </table>
+        </hgroup>
+    </body>
+</html>
