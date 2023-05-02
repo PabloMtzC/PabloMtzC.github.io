@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+    Nombre: Pablo Martínez Cruz
+    Materia: Programación web I
+    Fecha: 02/Mayo/2023
+    Descripción: Tareas Módulo No.2
+-->
+<html lang="es">
+    <head>
+        <title>Unidad 03-Ejercicio03</title>
+        <meta charset="utf-8">
+        <meta name="author"content="Pablo Martínez Cruz">
+        <meta name="revised"content="Martes,02 de Mayo de 2023">
+        <meta name="description"content="Boolean,Number,BigInt,String,Undefined">
+        <style>
+            .Tit {background-color: black;color: aqua;}
+        </style>
+    </head>
+    <body>
+        <h1 class="Tit">JavaScript - Tipos de Datos</h1>
+        <script>
+            /*Tipos de Datos Primitivos - Tareas*/
+            let varBoolean=Boolean(true);
+            let varNumber=Number(3.1416);
+            let varBigInt=BigInt(23);
+            let varString=String("UPSLP");
+            let varUndefined;
+
+            alert("varBoolean es de tipo: "+typeof varBoolean +"con un valor de: "+varBoolean + "\nvarNumber es de tipo: "+typeof varNumber +"con un valor de: "+varNumber +"\nvarBigInt es de tipo: "+typeof varBigInt +"con un valor de: "+varBigInt + "\nvarString es de tipo: "+typeof varString  +"con un valor de: "+varString  +"\nvarUndefined es de tipo: "+typeof varUndefined +"con un valor de: "+varUndefined);
+
+            let varString2="1234";
+            let varNumber2=Number(varString);
+            let varBigInt2=BigInt(varNumber);
+            let varBool=Boolean(varBigInt);
+        </script>
+    </body>
+</html>

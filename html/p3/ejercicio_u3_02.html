@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+    Nombre: Pablo Martínez Cruz
+    Materia: Programación web I
+    Fecha: 25/Abril/2023
+    Descripción: Tareas Módulo No.2
+-->
+<html lang="es">
+    <head>
+        <title>Unidad 03-Ejercicio02</title>
+        <meta charset="utf-8">
+        <meta name="author"content="Pablo Martínez Cruz">
+        <meta name="revised"content="Martes, 25 de abril del 2023">
+        <meta name="description"content="alert,let,function">
+        <style>
+            .Tit {background-color: black;color: aqua;}
+        </style>
+    </head>
+    <body>
+        <h1 class="Tit">JavaScript - Var & Alert</h1>
+        <script>
+            let x=100;
+            let y=50;
+            alert("Valor de X (main): " +x);
+            alert("Valor de Y (main): " +y);
+
+            function testFunction(){
+                let x=1;
+                let y=5;
+                alert("Valor de X (funtion): " +x);
+                alert("Valor de Y(funcion): " +x);
+            }
+            testFunction();
+            alert("Valor de X (main): " +x);
+            alert("Valor de Y(main): " +y);
+        </script>
+        <script>
+            /*2.1.1.19 Variables - Tareas*/
+            const precioR=8;
+            const costoLirio=10;
+            const tulipanPrecio=2;
+
+            let numR=70,importeRosas;
+            let cantidadLirio=50,subtotalLirio;
+            let tulipanCantidad=120,tulipanSubTotal;
+            let total=0;
+
+            function calcula(){
+                importeRosas=precioR*numR;
+                subtotalLirio=costoLirio*cantidadLirio;
+                tulipanSubTotal=tulipanCantidad*tulipanPrecio;
+                total=importeRosas+subtotalLirio+tulipanSubTotal;
+            }
+            
+            function resultado(){
+                alert("Rosa>> Precio: $" +precioR+"Cantidad:"+numR +"Valor: $" +importeRosas +"\nLirio>> Precio: $" +costoLirio  +"Cantidad:"+cantidadLirio  +"Valor: $"+subtotalLirio+"\nTulipán>> Precio: " + tulipanPrecio + "Cantidad:"+tulipanCantidad   +"Valor:$"+tulipanSubTotal+"\nTotal:  $"+total);
+            }
+
+            calcula();
+            resultado();
+            numR-=20;
+            cantidadLirio-=30;
+            calcula();
+            resultado();
+        </script>
+        <script>
+            /*2.1.1.20 LABORATORIO: Variables*/
+            let nombre, telefono,correo;
+
+            function imprime(str1,str2,str3){
+                alert("Nombre>>"+str1 +"\nTeléfono:"+str2+"\nCorreo:"+str3);
+            }
+
+            nombre="Maxwell Wright";
+            telefono="(0191) 719 6495";
+            correo="Curabitur.egestas.nunc@nonummyac.co.uk"
+            imprime(nombre,telefono,correo);
+
+            nombre="Raja Villarreal";
+            telefono="0866 398 2895";
+            correo="posuere.vulputate@sed.com"		
+		
+            nombre="Helen Richards";
+            telefono="0800 1111";
+            correo="libero@convallis.edu"
+            imprime(nombre,telefono,correo);
+        </script>
+    </body>
+</html>
