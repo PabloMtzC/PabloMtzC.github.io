@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+    Nombre: Pablo Martínez Cruz
+    Materia: Programación web I
+    Fecha: 10/Mayo/2023
+    Descripción: Tareas Módulo No.4
+-->
+<html lang="es">
+    <head>
+        <title>Unidad 03-Ejercicio07</title>
+        <meta charset="utf-8">
+        <meta name="author"content="Pablo Martínez Cruz">
+        <meta name="revised"content="Miercoles,10 de Mayo de 2023">
+        <meta name="description"content="for,do,while">
+        <style>
+            .Tit {background-color: black;color: aqua;}
+        </style>
+    </head>
+    <body>
+        <h1 class="Tit">JavaScript - Bucles</h1>
+        <script>
+            /*4.1.1.11 Tareas: Condicionales*/
+            /*Tarea 1*/
+            let varNum;
+
+            /*CICLO FOR*/
+            for (varNum=100; varNum>=0; varNum-=10) {
+                console.log("For Valor: " + varNum);
+            }
+
+            /*CICLO DO-WHILE*/
+            varNum=100;
+            do{
+                console.log("For Valor: " + varNum);
+                varNum-=10;
+            }while(varNum>=0);
+
+            /*CICLO WHILE*/
+            varNum=100;
+            while(varNum>=0){
+                console.log("For Valor: " + varNum);
+                varNum-=10;
+            };
+
+            /*Tarea 2*/
+            let varNum2;
+            let varValor1= Number(prompt("Valor inicial:"));
+            let varValor2= Number(prompt("Valor final:"));
+            let bandDec=false, bandInc=false;
+            if(varValor1>varValor2)
+                bandDec=true;
+            else
+                bandInc=true;
+            if(Number.isNaN(varValor1) || Number.isNaN(varValor2))
+                alert("Los valores deben ser numericos...");
+            for (varNum2=varValor1;;) {
+                console.log("ForDinámico Valor: " + varNum2);
+                if(bandDec) {varNum2 -=10; if(varNum2>=varValor2) continue; else break;}
+                else {varNum2 +=10; if(varNum2<=varValor2) continue; else break;}
+            }
+
+            /*Tarea 6*/
+            let varNum1,varNum_2,varOp,varResultado,varContinuar, varHistorial;
+            varHistorial="--Rgidtro de operaciones realizadas--";
+            do{
+                varNum1=prompt("Primer operando:");
+                varNum_2=prompt("Segundo operando:");
+                varOp=prompt("Operación (+,-,*,/):");
+
+                varNum1 = Number.parseInt(varNum1,10);
+                varNum_2 = Number.parseInt(varNum_2,10);
+
+                varResultado="";
+
+                if(Number.isNaN(varNum1) || Number.isNaN(varNum_2)){
+                    switch(varOp){
+                        case '+':
+                            varResultado="El resultado de ("+ varNum1 + "+" + varNum_2 +") es:" + (varNum1 + varNum_2);
+                        break;
+                        case '-':
+                            varResultado="El resultado de ("+ varNum1 + "-" + varNum_2 +") es:" + (varNum1 - varNum_2);
+                        break;
+                        case '*':
+                            varResultado="El resultado de ("+ varNum1 + "*" + varNum_2 +") es:" + (varNum1 * varNum_2);
+                        break;
+                        case '/':
+                            varResultado="El resultado de ("+ varNum1 + "/" + varNum_2 +") es:" + (varNum1 / varNum_2);
+                        break;
+                        default: varResultado="Operación incorrecta";
+                    }
+                }else {
+                    varResultado="Los operadores deben ser valores numericos";
+                }
+                alert(varResultado);
+                varHistorial+="\n" + varResultado; 
+                varContinuar= confirm("Deseas realizar otra operación?");
+            }while(varContinuar);
+        </script>
+    </body>
+</html>

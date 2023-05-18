@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+    Nombre: Pablo Martínez Cruz
+    Materia: Programación web I
+    Fecha: 05/Mayo/2023
+    Descripción: Tareas Módulo No.3
+-->
+<html lang="es">
+    <head>
+        <title>Unidad 03-Ejercicio05</title>
+        <meta charset="utf-8">
+        <meta name="author"content="Pablo Martínez Cruz">
+        <meta name="revised"content="Viernes,05 de Mayo de 2023">
+        <meta name="description"content="alert, promt">
+        <style>
+            .Tit {background-color: black;color: aqua;}
+        </style>
+    </head>
+    <body>
+        <h1 class="Tit">JavaScript - Operadores</h1>
+        <script>
+            /*3.3.1.7 Interacción con el usuario - Tareas*/
+            let varAncho= prompt("Cuál es el valor de la ancho?","20");
+            let varAltura= prompt("Cuál es el valor de la altura?","10");
+            let varLongitud= prompt("Cuál es el valor de la Longitud?","50");
+
+            let bandAncho,bandAlto,bandLargo;
+            let strMensaje="No es válido el valor introducido para: ";
+
+            bandAncho = varAncho ? true : false;
+            bandAlto = varAltura ? true : false;
+            bandLargo = varLongitud ? true : false;
+
+            if(!bandAncho)
+                strMensaje += "\n - Ancho";
+            if(!bandAlto)
+                strMensaje += "\n - Alto";
+            if(!bandLargo)
+                strMensaje += "\n - Largo";
+            if(bandAncho && bandAlto && bandLargo)
+                alert("El volumen del objeto es de: " + (varAncho*varAltura*varLongitud) + "unidades cúbicas");
+            else 
+                alert(strMensaje);
+        </script>
+    </body>
+</html>
