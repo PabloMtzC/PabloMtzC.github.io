@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+    Nombre: Pablo Martínez Cruz
+    Materia: Programación web I
+    Fecha: 12/Mayo/2023
+    Descripción: Funciones y eventos
+-->
+<html lang="es">
+    <head>
+        <title>Unidad 03-Ejercicio08</title>
+        <meta charset="utf-8">
+        <meta name="author"content="Pablo Martínez Cruz">
+        <meta name="revised"content="Viernes,12 de Mayo de 2023">
+        <meta name="description"content="">
+        <style>
+            .Tit {background-color: black;color: aqua;}
+        </style>
+    </head>
+    <body onload="if(confirm('Aceptas las cookies')==false)window.location='https://www.google.com/'">
+        <h1 class="Tit">JavaScript - Funciones & Eventos</h1>
+        <h2>JavaScript contenido en etiqueta</h2>
+        <button onclick="document.body.style.background='lightblue';" ondblclick="alert('Hola Mundo !!!');">Cambia Fondo</button>
+        <h2>JavaScript contenido en funciones</h2>
+        <button id="btnColor">Cambia Fondo</button>
+        <button id="btnSaludar">Saluda a todos</button>
+        <script>
+            /*Modo básico*/
+            let button=document.getElementById("btnColor");
+            function funColor_A(){
+                document.body.style.background='red';
+            }
+            function funColor_B(){
+                document.body.style.background='lightgreen';
+            }
+            button.addEventListener('click',funColor_A);
+            button.addEventListener('dblclick',funColor_B);
+            /*Modo optimizado*/
+            document.getElementById("btnSaludar").addEventListener('click',()=>{ 
+                alert("Hola alumnos de la UPSLP :)");
+            });
+        </script>
+        <h2>Eventos del mouse</h2>
+        <p style="background-color: aquamarine;" onmouseover="alert('Acabas de pasar por encima')" onmouseout="alert('acabas de salir')">Puedes pasar por encima del párrafo o hacer click en el...</p>
+        <h2>Formulario con JavaScript</h2>
+        <label>Nombre:</label><input type="text" id="varNombre" placeholder="(Nombre)"><input type="button" value="Acción" onclick="let varMensaje='Hola '+ document.getElementById('varNombre').value +', Cómo estas?';alert(varMensaje);document.getElementById('varResultado').value=varMensaje"><br>
+        <label>Resultado:</label>
+        <input type="text" id="varResultado" placeholder="(Resultado)" readonly>    
+
+        <table border="5">
+            <thead>
+              <tr>
+                <th>Figura</th>
+                <th>Datos</th>
+                <th>Resultado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">Cuadrado</td>
+                <td>Base:<input type="number" id="varBase"></td>
+                <td rowspan="2">Área:<input type="number" id="varArea" readonly><input type="button" value="Calcular" onclick="document.getElementById('varArea').value=document.getElementById('varBase').value * document.getElementById('varAltura').value"></td>
+              </tr>
+              <tr>
+                <td>Altura:<input type="number" id="varAltura"></td>
+              </tr>
+              <tr>
+                <td>Cubo</td>
+                <td>Profundidad:<input type="number" id="varProfundidad"></td>
+                <td>Volumen:<input type="number" id="varVolumen" readonly><input type="button" value="Calcular" onclick="document.getElementById('varVolumen').value=document.getElementById('varBase').value * document.getElementById('varAltura').value * document.getElementById('varProfundidad').value"></td>
+              </tr>
+            </tbody>
+            </table>
+          <h2>Almacenamiento</h2>
+          <button onclick="aumentaContador1()">Contador No.1</button><label>Contador No.1:</label><input type="number" id="varContador1" placeholder="(Contador No.1)" readonly>
+          <br>
+          <button onclick="aumentaContador2()">Contador No.2</button><label>Contador No.2:</label><input type="number" id="varContador2" placeholder="(Contador No.2)" readonly>
+          <script>
+            function aumentaContador1(){
+              if(typeof(Storage)!="undefined"){
+                if(localStorage.contador1){
+                  localStorage.contador1++;
+                }
+                else{localStorage.contador1=1;}
+                document.getElementById('varContador1').value=localStorage.contador1;
+              }
+              else{alert("Almacenamiento no soportado por el navegador");}
+            }
+            function aumentaContador2(){
+              if(typeof(Storage)!="undefined"){
+                if(sessionStorage.contador2){sessionStorage.contador2++;}
+                else{sessionStorage.contador2=1;}
+                document.getElementById('varContador2').value=sessionStorage.contador2;
+              }
+              else{alert("Almacenamiento no soportado por el navegador");}
+            }
+          </script>
+    </body>
+</html>
