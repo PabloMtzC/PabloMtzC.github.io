@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+    Nombre: Pablo Martínez Cruz
+    Materia: Programación web I
+    Fecha: 24/Mayo/2023
+    Descripción:Examen Parcial 3
+-->
+<html lang="es">
+    <head>
+        <title>Examen Parcial 3</title>
+        <meta charset="utf-8">
+        <meta name="author"content="Pablo Martínez Cruz">
+        <meta name="revised"content="Miercoles,24 de mayo de 2023">
+        <meta name="description"content="">
+        <style>
+            .calculator {
+                width: 200px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            #result {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 5px;
+            }
+
+            .keypad {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 5px;
+            }
+
+            button {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <hgroup>
+            <h1>Calculadora</h1>
+            <div class="calculator">
+                <input type="text" id="result" readonly>
+                <div class="keypad">
+                  <button onclick="clearResult()">C</button>
+                  <button onclick="appendToResult('7')">7</button>
+                  <button onclick="appendToResult('8')">8</button>
+                  <button onclick="appendToResult('9')">9</button>
+                  <button onclick="appendToResult('4')">4</button>
+                  <button onclick="appendToResult('5')">5</button>
+                  <button onclick="appendToResult('6')">6</button>
+                  <button onclick="appendToResult('1')">1</button>
+                  <button onclick="appendToResult('2')">2</button>
+                  <button onclick="appendToResult('3')">3</button>
+                  <button onclick="appendToResult('0')">0</button>
+                  <button onclick="calculate()">=</button>
+                  <button onclick="appendToResult('+')">+</button>
+                  <button onclick="appendToResult('-')">-</button>
+                  <button onclick="appendToResult('*')">*</button>
+                  <button onclick="appendToResult('/')">/</button>
+                </div>
+              </div>
+              <script>
+                function appendToResult(value) {
+                    document.getElementById('result').value += value;
+                }
+                
+                function clearResult() {
+                    document.getElementById('result').value = '';
+                }
+                
+                function calculate() {
+                    const result = document.getElementById('result').value;
+                    const answer = eval(result); 
+                    document.getElementById('result').value = answer;
+                }
+              </script>
+        </hgroup>
+    </body>
+</html>
